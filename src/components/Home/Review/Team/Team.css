@@ -1,0 +1,79 @@
+.section_title {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    padding: 10px 0;
+    text-align: center;
+   
+  }
+  .teams {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+    place-items: center;
+    text-align: center;
+    line-height: 1.5;
+    padding: 15px 70px;
+    
+  }
+  .team {
+    margin: 2rem 0;
+    box-shadow: 0 3px 20px 0px rgba(138, 163, 158, 0.623);
+    padding: 20px 0;
+    border-radius: 10px;
+    cursor: grab;
+    background: #e4e4e4 !important;
+    
+  }
+  .profile {
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    border: 2px solid rgba(0, 0, 0, 0.445);
+  }
+  .title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: steelblue;
+    padding: 0 1rem;
+  }
+  .post {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: rgb(0, 46, 49);
+  }
+  .position {
+    letter-spacing: 3px;
+    font-size: 1.3rem;
+    color: rgb(3, 80, 131);
+  }
+  .description {
+    text-align: justify;
+    padding: 0 20px;
+    font-size: 1.1rem;
+  }
+  
+  .contact_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact_link > a {
+    padding-left: 20px;
+    font-size: 1.5rem;
+  }
+  .contact_link .linkedin_icon {
+    color: rgb(12, 70, 196);
+  }
+  .contact_link .git_icon {
+    background: black;
+    color: #fff;
+    border-radius: 50%;
+  }
+  .contact_link .web_icon {
+    color: slategrey;
+  }

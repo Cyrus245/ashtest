@@ -1,0 +1,163 @@
+.services {
+    padding: 7rem 0 6rem;
+    width: 100%;
+    background-color: #d1d1d1 !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.service {
+    margin: 1.5rem 0;
+}
+
+.service-card {
+    box-shadow: 0 0px 60px 0 rgb(0 0 0 / 2%);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    position: relative;
+    background: #42474d;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    box-shadow: 0 8px 6px -5px rgb(161, 161, 161);
+    /* margin-top: -1rem; */
+    color: black;
+    max-height: 600px;
+    min-height: 400px;
+}
+
+/* .service-card:hover .serviceDes {
+    color: black;
+    overflow: 'hidden';
+    display: 'hidden';
+} */
+
+.service-card:hover .serviceImg {
+    height: 0;
+}
+
+.service-card:hover .bookingBox {
+    display: block;
+    /* margin-bottom: -2rem; */
+    transition: 0.4s;
+}
+
+.service-card:hover .serviceName {
+    padding: 0.2rem 0 0.2rem;
+}
+
+.service-card:hover .serviceDes {
+    line-height: 1.5;
+    display: none;
+}
+.service-card:hover .serviceDesFull {
+    line-height: 1.5;
+    display: block;
+    font-weight: 500;
+    font-family: sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.service-card:hover::before {
+    transform: scaleY(1);
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: transform 300ms ease-out;
+    transform: scaleY(0);
+    border-radius: 0.5rem;
+    background-color: #cdbf87;
+}
+
+.serviceImg {
+    height: 300px;
+    width: 100%;;
+    object-fit: cover;
+    background-color: #cdbf87;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    transition: 0.4s;
+}
+
+.serviceDes {
+    color: white;
+    font-weight: 500;
+    line-height: 1.9;
+    font-family: sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.serviceDesFull {
+    display: none;
+}
+
+.serviceName {
+    font-weight: 700;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    margin-bottom: 0;
+}
+
+.moreBtn{
+    border-radius: 1.8rem;
+    font-weight: 500;
+    font-size: 1rem;
+    outline: none;
+    color: #44444b;
+    border: none;
+    margin-left: 45%;
+    padding: 0.5rem 1rem;
+    background: #d1bd84;
+    margin-top: 30px;
+}
+.bookingBox {
+    display: none;
+    transition: 2s;
+}
+
+.bookingBtn {
+    border-radius: 1.8rem;
+    font-weight: 500;
+    font-size: 1rem;
+    outline: none;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    background: #146EBE;
+    margin-top: 0.3rem;
+}
+
+.servicePrice {
+    color: #146EBE;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.bookingBtn:hover {
+    background: #146EBE;
+}
+
+@media (max-width: 981px) {
+    .moreBtn{
+        margin-left: 37%;
+       
+    }
+}
