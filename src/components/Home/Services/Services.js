@@ -8,14 +8,14 @@ const Services = () => {
   const [showMore, setShowMore] = useState(false);
 
   useEffect(async () => {
-    // axios
-    //   .get("https://backend.ashinteriorbd.com/api/product/v1/product/list")
-    //   .then((res) => setServices(res?.data.data.product));
+    axios
+      .get("http://localhost:4000/api/product/v1/product/list")
+      .then((res) => setServices(res?.data.data.product));
 
-    let data = await axios.get(
-      "http://localhost:4000/api/product/v1/product/list"
-    );
-    console.log(data);
+    // let data = await axios.get(
+    //   "http://localhost:4000/api/product/v1/product/list"
+    // );
+    // console.log(data);
   }, []);
   console.log(services);
   return (
