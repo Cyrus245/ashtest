@@ -12,7 +12,9 @@ const Header = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/content/v1/contentheader/list")
+      .get(
+        "https://backend-ashinteriorbd-8a6e29b4adf0.herokuapp.com/api/content/v1/contentheader/list"
+      )
       .then((res) => {
         setHeader(res?.data.data.content);
         console.log(res?.data.data.content);

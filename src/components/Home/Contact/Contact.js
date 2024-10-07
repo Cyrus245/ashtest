@@ -18,7 +18,10 @@ const Contact = () => {
       ...data,
     };
     axios
-      .post("http://localhost:4000/api/contact/v1/contact/add", headerInfo)
+      .post(
+        "https://backend-ashinteriorbd-8a6e29b4adf0.herokuapp.com/api/contact/v1/contact/add",
+        headerInfo
+      )
       .then((res) => {
         toast.dismiss(loading);
         if (res.data) {
