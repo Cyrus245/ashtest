@@ -9,7 +9,9 @@ const Services = () => {
 
   useEffect(async () => {
     axios
-      .get("http://localhost:4000/api/product/v1/product/list")
+      .get(
+        "https://backend-ashinteriorbd-8a6e29b4adf0.herokuapp.com/api/product/v1/product/list"
+      )
       .then((res) => setServices(res?.data.data.product));
 
     // let data = await axios.get(
