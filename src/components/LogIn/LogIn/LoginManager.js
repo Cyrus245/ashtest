@@ -2,7 +2,7 @@
 // // import "firebase/auth";
 // // import firebaseConfig from "../../../config/firebaseConfig";
 // import jwt_decode from "jwt-decode";
-import userImg from '../../../image/user.svg'
+import userImg from "../../../image/user.svg";
 
 // if(!firebase.apps.length){
 //     firebase.initializeApp(firebaseConfig);
@@ -56,20 +56,16 @@ import userImg from '../../../image/user.svg'
 //   });
 // }
 
-export const adminLogin = (email, password) =>{
-  
-  if(email === "admin@ashinteriorbd.com" && password === "admin5678"){
-    
+export const adminLogin = (email, password) => {
+  if (email === "admin@ashinteriorbd.com" && password === "admin5678") {
     const res = {
-      email : "admin@ashinteriorbd.com",
-      password : "admin5678",
-    }
-    
+      email: "admin@ashinteriorbd.com",
+      password: "admin5678",
+    };
+
     return handleResponse(res);
-  }
-  else 
-      return "Sorry"
-  
+  } else return "Sorry";
+
   // return firebase.auth().signInWithEmailAndPassword(email, password)
   // .then( res => {
   //   setToken();
@@ -81,13 +77,13 @@ export const adminLogin = (email, password) =>{
   //     }
   //     return message;
   // });
-}
+};
 
 const defaultName = (str) => {
-  let myStr = str
-  let firstWord = myStr?.substring(0, 4)
+  let myStr = str;
+  let firstWord = myStr?.substring(0, 4);
   return firstWord;
-}
+};
 
 const handleResponse = (res) => {
   //const {displayName, email, photoURL} = res.user;
@@ -100,9 +96,9 @@ const handleResponse = (res) => {
     email: email,
     //img: photoURL || userImg,
     img: userImg,
-  }
+  };
   return userInfo;
-}
+};
 
 // export const getDecodedUser = () => {
 //   const token = localStorage.getItem('token');
@@ -146,3 +142,12 @@ const handleResponse = (res) => {
 //         return signedOutUser;
 //       })
 // }
+
+export const getDecodedUser = () => {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    return {};
+  }
+  const decodedUser = JSON.parse(localStorage.getItem("user"));
+  return decodedUser;
+};

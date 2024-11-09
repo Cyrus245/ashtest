@@ -10,7 +10,7 @@ const Gallerys = () => {
   useEffect(() => {
     axios
       .get(
-        "backend-ashinteriorbd-8a6e29b4adf0.herokuapp.com/api/gallery/v1/gallery/list"
+        "https://backend-ashinteriorbd-8a6e29b4adf0.herokuapp.com/api/gallery/v1/gallery/list"
       )
       .then((res) => {
         setGallery(res?.data.data.gallery);

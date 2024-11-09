@@ -29,7 +29,7 @@ const AddProject = ({ edit, setEdit, projects }) => {
     if (edit) {
       axios
         .put(
-          `backend-ashinteriorbd-8a6e29b4adf0.herokuapp.com/api/project/v1/project/update/${edit}`,
+          `https://backend-ashinteriorbd-8a6e29b4adf0.herokuapp.com/api/project/v1/project/update/${edit}`,
           projectInfo
         )
         .then((res) => {
@@ -44,7 +44,7 @@ const AddProject = ({ edit, setEdit, projects }) => {
     } else {
       axios
         .post(
-          "backend-ashinteriorbd-8a6e29b4adf0.herokuapp.com/api/project/v1/project/add",
+          "https://backend-ashinteriorbd-8a6e29b4adf0.herokuapp.com/api/project/v1/project/add",
           projectInfo
         )
         .then((res) => {

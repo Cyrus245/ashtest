@@ -23,12 +23,12 @@ const Reviews = () => {
   useEffect(() => {
     axios
       .get(
-        "backend-ashinteriorbd-8a6e29b4adf0.herokuapp.com/api/project/v1/project/list"
+        "https://backend-ashinteriorbd-8a6e29b4adf0.herokuapp.com/api/project/v1/project/list"
       )
       .then((res) => {
         console.log(res);
         setReviews(res?.data.data.project);
-        console.log(res?.data.data.project);
+        console.log(reviews);
       });
   }, []);
   return (
@@ -39,6 +39,7 @@ const Reviews = () => {
       {/* <div className="text-center mb-4">
                 <h3 className="sectionTitle">WHAT OUR CLIENTS SAY’S</h3>
             </div> */}
+
       <Col md={11} className="mx-auto">
         <Swiper
           pagination={{ clickable: true }}

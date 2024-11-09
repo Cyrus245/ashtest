@@ -1,6 +1,11 @@
-import { createContext, useState, lazy, Suspense } from "react";
+import { createContext, useState, lazy, Suspense, useEffect } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Routes,
+} from "react-router-dom";
 import PrivateRoute from "./components/LogIn/PrivateRoute/PrivateRoute";
 import { Toaster } from "react-hot-toast";
 import { getDecodedUser } from "./components/LogIn/LogIn/LoginManager";
@@ -15,8 +20,14 @@ const Dashboard = lazy(() =>
 export const UserContext = createContext();
 const App = () => {
   const [admin, setAdmin] = useState(false);
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(getDecodedUser());
   const [selectedService, setSelectedService] = useState({});
+
+  useEffect(() => {
+    if (user?.role === "admin") {
+      setAdmin(true);
+    }
+  }, [user]);
 
   return (
     <UserContext.Provider
@@ -36,9 +47,12 @@ const App = () => {
             <PrivateRoute path="/dashboard">
               <Dashboard />
             </PrivateRoute>
-            <Route path="/login">
+
+            {/* <Route path="/login">
               <LoginModal />
-            </Route>
+            </Route> */}
+            <Route exact path="/login" component={LoginModal} />
+
             <Route exact path="/">
               <Home />
             </Route>

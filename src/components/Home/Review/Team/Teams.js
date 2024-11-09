@@ -11,7 +11,7 @@ const Teams = () => {
   useEffect(() => {
     axios
       .get(
-        "backend-ashinteriorbd-8a6e29b4adf0.herokuapp.com/api/team/v1/team/list"
+        "https://backend-ashinteriorbd-8a6e29b4adf0.herokuapp.com/api/team/v1/team/list"
       )
       .then((res) => {
         console.log(res?.data.data.team);
