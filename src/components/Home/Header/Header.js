@@ -54,12 +54,12 @@ const Header = () => {
                 </div>
             </div>)} */}
             <Carousel.Caption style={{ marginBottom: "50px" }}>
-              <p>{head?.title.substring(0, 15)}</p>
+              {/* <p>{head?.title.substring(0, 15)}</p> */}
               <h1>
-                {head?.title.substring(16)}{" "}
-                <span className="headerHighlight">BUSINESS</span>
+                {/* {head?.title.substring(16)}{" "} */}
+                {/* <span className="headerHighlight">BUSINESS</span> */}
               </h1>
-              <p>{head?.subTitle}</p>
+              {/* <p>{head?.subTitle}</p> */}
               <a href="#services">
                 <button className="branBtn">Get Started</button>
               </a>
