@@ -44,7 +44,7 @@ const TopBar = () => {
             <span>
               <FontAwesomeIcon icon={faClock} />
             </span>
-            <span> Sat-Thu: 10:00 A.M - 6:00 P.M</span>
+            <span> Sat-Thu: 10:00 AM - 6:00 PM</span>
           </div>
         </div>
         <div className="topNab-contact">
